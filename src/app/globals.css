@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #191824;
+  --background-hover: #202036;
+
+  --text-color: white;
+  --text-hover: #d5d4f7;
+  --text-error: #c13054;
+  --text-positive: #4c8d4c;
+  --text-noticed: #e1aa44;
+
+  --border-color: #423e6b;
+}
+
+@theme {
+  --font-bungee: var(--font-bungee);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1c1412;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--text-color);
+}
+
+@keyframes walk-and-respawn {
+  0% {
+    left: 0%;
+    transform: scaleX(-1) scaleY(0);
+    opacity: 0;
+  }
+  2% {
+    left: 0%;
+    transform: scaleX(-1) scaleY(1);
+    opacity: 1;
+  }
+
+  90% {
+    left: 95%;
+    transform: scaleX(-1) scaleY(1);
+    opacity: 1;
+  }
+
+  95%,
+  97% {
+    left: 95%;
+    transform: scaleX(-1) scaleY(0);
+    opacity: 0;
+  }
+
+  98% {
+    left: 0%;
+    transform: scaleX(-1) scaleY(0);
+    opacity: 0;
+  }
+
+  100% {
+    left: 0%;
+    transform: scaleX(-1) scaleY(0);
+    opacity: 0;
+  }
+}
+
+.animate-walk {
+  transform-origin: bottom center;
+  animation: walk-and-respawn 40s infinite linear;
+}
