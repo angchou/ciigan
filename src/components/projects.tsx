@@ -25,7 +25,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="border-b border-[var(--border-color)] flex justify-center w-full px-4 sm:px-6">
+    <div
+      id="projects"
+      className="border-b border-[var(--border-color)] flex justify-center w-full px-4 sm:px-6"
+    >
       <div className="border-x border-[var(--border-color)] py-6 sm:py-10 px-4 sm:px-8 w-full flex justify-center">
         <div className="flex flex-col gap-6 md:gap-8 w-full max-w-6xl cursor-default">
           <h1 className="text-2xl font-bungee sm:text-3xl font-bold text-[var(--text-hover)]">

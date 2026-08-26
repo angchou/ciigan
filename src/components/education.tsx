@@ -4,6 +4,8 @@ import { useState } from "react";
 import blackmage_gif from "../assets/chars/blackmage.gif";
 import blackmage from "../assets/chars/blackmage.png";
 
+import { X } from "lucide-react";
+
 const educationData = [
   {
     period: "2021 - 2024",
@@ -34,10 +36,13 @@ export default function Education() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="border-b border-[var(--border-color)] flex justify-center w-full px-4 sm:px-6">
-      <div className="border-x border-[var(--border-color)] pt-28 pb-28 px-10 w-full flex justify-center">
+    <div
+      id="education"
+      className="border-b border-[var(--border-color)] flex justify-center w-full px-4 sm:px-6"
+    >
+      <div className="border-x border-[var(--border-color)] pt-14 2xl:pt-28 pb-28 px-10 w-full flex justify-center">
         <div className="flex flex-col gap-6 md:gap-8 w-full max-w-6xl cursor-default">
-          <h1 className="font-bungee text-2xl sm:text-3xl font-bold text-[var(--text-hover)]">
+          <h1 className="font-bungee mb-3 text-3xl font-bold text-[var(--text-hover)]">
             Education
           </h1>
 
@@ -51,7 +56,7 @@ export default function Education() {
                 style={{
                   animationPlayState: isHovered ? "paused" : "running",
                 }}
-                className="relative w-12 h-12 -top-12 2xl:w-20 2xl:h-20 2xl:-top-20 animate-walk pointer-events-auto cursor-pointer"
+                className="relative w-12 h-12 -top-12 sm:w-16 sm:h-16 sm:-top-16 2xl:w-20 2xl:h-20 2xl:-top-20 animate-walk pointer-events-auto cursor-pointer"
               >
                 {isHovered && (
                   <div className="-scale-x-100 absolute -top-10 left-1/2 -translate-x-1/2 transition-all duration-200 pointer-events-none z-40">
@@ -122,18 +127,18 @@ export default function Education() {
 
           {selectedItem !== null && (
             <div
-              className="2xl:hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+              className="2xl:hidden fixed inset-0 z-200 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
               onClick={() => setSelectedItem(null)}
             >
               <div
-                className="w-full max-w-xl p-5 border border-[var(--border-color)] rounded-2xl bg-[var(--background-color,#121212)] shadow-2xl relative"
+                className="w-full max-w-xl p-5 border border-[var(--border-color)] rounded-2xl bg-[var(--background-hover)] shadow-2xl relative"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
                   onClick={() => setSelectedItem(null)}
-                  className="absolute top-3 right-3 w-7 h-7 rounded-full bg-[var(--background-hover)] border border-[var(--border-color)] flex items-center justify-center text-xs opacity-70 hover:opacity-100"
+                  className="absolute top-3 right-3 w-7 h-7 rounded-full bg-[var(--background-hover)] border border-[var(--border-color)] flex items-center cursor-pointer justify-center text-xs opacity-70 hover:rotate-15 hover:opacity-100"
                 >
-                  ✕
+                  <X className="shrink-0 size-5" />
                 </button>
 
                 <div className="flex flex-col items-start gap-2 pt-1">
@@ -145,7 +150,7 @@ export default function Education() {
                     {educationData[selectedItem].title}
                   </h3>
 
-                  <p className="text-sm font-semibold text-amber-300">
+                  <p className="text-sm font-semibold text-[var(--text-noticed)]">
                     {educationData[selectedItem].subtitle}
                   </p>
 

@@ -50,7 +50,10 @@ const tech_stacks = [
 
 export default function Stacks() {
   return (
-    <div className="border-b border-[var(--border-color)] flex justify-center w-full px-4 sm:px-6">
+    <div
+      id="stacks"
+      className="border-b border-[var(--border-color)] flex justify-center w-full px-4 sm:px-6"
+    >
       <div className="border-x border-[var(--border-color)] py-6 sm:py-10 px-4 sm:px-8 w-full flex justify-center">
         <div className="flex w-full flex-col gap-6 md:gap-8 max-w-6xl cursor-default">
           <h1 className="font-bungee text-2xl sm:text-3xl font-bold text-[var(--text-hover)]">
@@ -73,7 +76,7 @@ export default function Stacks() {
                     </span>
                   </div>
 
-                  <div className="flex flex-wrap items-center gap-3 mt-6 w-full bg-[var(--background-hover)] px-4 py-3.5 rounded-lg border border-[var(--border-color)]/50">
+                  <div className="flex flex-wrap items-center gap-3 mt-6 w-full bg-[var(--background-hover)] px-4 py-3.5 rounded-lg">
                     {Object.entries(stack.list).map(([key, item], imgIndex) => (
                       <div
                         key={imgIndex}

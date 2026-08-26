@@ -18,7 +18,10 @@ const pages = [
 
 export default function AboutMe() {
   return (
-    <div className="border-b border-[var(--border-color)] flex justify-center w-full px-4 sm:px-6">
+    <div
+      id="about"
+      className="border-b border-[var(--border-color)] flex justify-center w-full px-4 sm:px-6"
+    >
       <div className="border-x border-[var(--border-color)] py-6 sm:py-10 px-4 sm:px-8 w-full flex justify-center">
         <div className="flex flex-col min-[880px]:flex-row gap-6 md:gap-8 max-w-6xl cursor-default">
           <div className="w-full md:w-auto shrink-0">

@@ -1,31 +1,57 @@
 @import "tailwindcss";
 
 :root {
+  --background: #ffffff;
+  --background-hover: #f3f3ff;
+  --background-reversed: #2d2b3d;
+
+  --text-color: #38364b;
+  --text-hover: #756fc2;
+  --text-error: #c13054;
+  --text-positive: #4c8d4c;
+  --text-noticed: #d47f17;
+
+  --border-color: #8580db;
+  --border-reversed: black;
+
+  --gh-level-0: #d8d7dfc8;
+  --gh-level-1: #115e59;
+  --gh-level-2: #0d9488;
+  --gh-level-3: #14b8a6;
+  --gh-level-4: #2dd4bf;
+}
+
+html.dark {
   --background: #191824;
   --background-hover: #202036;
+  --background-reversed: #ffffff;
 
-  --text-color: white;
+  --text-color: #ffffff;
   --text-hover: #d5d4f7;
   --text-error: #c13054;
   --text-positive: #4c8d4c;
   --text-noticed: #e1aa44;
 
   --border-color: #423e6b;
+  --border-reversed: #d5d4f7;
+
+  --gh-level-0: #444073c8;
+  --gh-level-1: #115e59;
+  --gh-level-2: #0d9488;
+  --gh-level-3: #14b8a6;
+  --gh-level-4: #2dd4bf;
 }
 
 @theme {
   --font-bungee: var(--font-bungee);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1c1412;
-  }
-} */
-
 body {
   background: var(--background);
   color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 @keyframes walk-and-respawn {
@@ -39,26 +65,22 @@ body {
     transform: scaleX(-1) scaleY(1);
     opacity: 1;
   }
-
   90% {
     left: 95%;
     transform: scaleX(-1) scaleY(1);
     opacity: 1;
   }
-
   95%,
   97% {
     left: 95%;
     transform: scaleX(-1) scaleY(0);
     opacity: 0;
   }
-
   98% {
     left: 0%;
     transform: scaleX(-1) scaleY(0);
     opacity: 0;
   }
-
   100% {
     left: 0%;
     transform: scaleX(-1) scaleY(0);
@@ -69,4 +91,24 @@ body {
 .animate-walk {
   transform-origin: bottom center;
   animation: walk-and-respawn 40s infinite linear;
+}
+
+@keyframes chocobo-run {
+  0% {
+    left: 0%;
+    transform: translateX(-100%);
+  }
+  80% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
+
+.animate-chocobo-run {
+  position: relative;
+  animation: chocobo-run 10s linear infinite;
 }
