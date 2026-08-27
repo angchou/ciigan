@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 
 import { Copy, SquareArrowOutUpRight, Check } from "lucide-react";
@@ -40,6 +40,7 @@ const social_links = [
 
 export default function Contacts() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleLinkClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -51,8 +52,16 @@ export default function Contacts() {
 
       navigator.clipboard.writeText(item.name);
 
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+
       setCopiedIndex(index);
-      setTimeout(() => setCopiedIndex(null), 1500);
+
+      timeoutRef.current = setTimeout(() => {
+        setCopiedIndex(null);
+        timeoutRef.current = null;
+      }, 1500);
     }
   };
 
@@ -85,7 +94,7 @@ export default function Contacts() {
                   </div>
 
                   <div
-                    className={`italic absolute right-0 top-0 bottom-0 flex items-center justify-center gap-2 bg-[#444073c8] text-white font-medium px-4 md:px-6 py-2 transition-all duration-300 ease-in-out ${
+                    className={`italic absolute right-0 top-0 bottom-0 flex items-center justify-center gap-2 bg-[var(--background-secondary)] text-white font-medium px-4 md:px-6 py-2 transition-all duration-300 ease-in-out ${
                       isCopied
                         ? "translate-x-full opacity-0"
                         : "translate-x-0 opacity-100 xl:translate-x-full xl:opacity-0 xl:group-hover:translate-x-0 xl:group-hover:opacity-100"

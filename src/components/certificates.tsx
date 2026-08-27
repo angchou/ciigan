@@ -49,7 +49,6 @@ export default function Certificate() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-  // Theo dõi kích thước màn hình
   useEffect(() => {
     const checkScreen = () => {
       setIsLargeScreen(window.innerWidth >= 1270);
@@ -60,7 +59,6 @@ export default function Certificate() {
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
-  // Xác định giới hạn items: Màn to (>1270px) là 4, màn nhỏ là 2
   const maxItems = isLargeScreen ? 4 : 2;
   const hasMore = certificates.length > maxItems;
   const visibleCertificates = isExpanded
@@ -82,7 +80,7 @@ export default function Certificate() {
             {visibleCertificates.map((cer, index) => {
               return (
                 <div key={cer.id || index} className="flex group">
-                  <div className="relative flex flex-col justify-between p-3 border border-[var(--border-color)] bg-[var(--background-color)] rounded-xl cursor-default w-full group-hover:-translate-y-2 transition duration-200">
+                  <div className="relative overflow-hidden shine-card flex flex-col justify-between p-3 border border-[var(--border-color)] bg-[var(--background-color)]/80 cursor-default w-full group-hover:-translate-y-2 transition duration-200">
                     <div className="flex flex-col gap-2 px-3 pt-2">
                       <div className="flex justify-between gap-1 items-center">
                         <h1 className="uppercase text-lg sm:text-xl font-bold tracking-wider text-[var(--text-color)] transition-colors w-full">
@@ -100,7 +98,7 @@ export default function Certificate() {
                       </div>
                     </div>
 
-                    <div className="flex h-full flex-wrap items-center gap-3 mt-6 w-full bg-[var(--background-hover)] px-4 py-3.5 rounded-lg">
+                    <div className="flex h-full flex-wrap items-center gap-3 mt-6 w-full bg-[var(--background-hover)]/60 px-4 py-3.5 rounded-lg">
                       <p className="flex-1 text-sm sm:text-base opacity-85 text-justify leading-relaxed">
                         {cer.summary}
                       </p>

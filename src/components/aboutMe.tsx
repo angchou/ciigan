@@ -50,9 +50,8 @@ export default function AboutMe() {
 
           <div className="w-full text-justify flex flex-col gap-3">
             <p>
-              Hello there! Welcome to my profile website. Welcome to my personal
-              space! I built this website to give you a visual look into who I
-              am and what I build.
+              Hello there! Welcome to my personal space! I built this website to
+              give you a visual look into who I am and what I build.
             </p>
             <p>
               I care about understanding how things actually work under the

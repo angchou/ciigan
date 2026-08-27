@@ -39,7 +39,7 @@ export default function ChangeThemeButton() {
     <button
       onClick={toggleTheme}
       aria-label="Toggle Theme"
-      className={`fixed top-4 right-4 z-50 p-2.5 rounded-full backdrop-blur-xl border transition-all duration-300 shadow-xl cursor-pointer hover:scale-110 active:scale-95 ${
+      className={`fixed top-2 right-2 z-50 p-2.5 rounded-full backdrop-blur-xl border transition-all duration-300 shadow-xl cursor-pointer hover:scale-110 active:scale-95 ${
         isDark
           ? "bg-white/80 border-2 border-[var(--background-hover)] hover:border-white/50 hover:bg-white/80"
           : "bg-black/40 border-2 border-black/15 hover:border-black/50 hover:bg-black/60"

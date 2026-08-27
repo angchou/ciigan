@@ -2,13 +2,15 @@
 
 :root {
   --background: #ffffff;
+  --background-secondary: #8d87e3;
   --background-hover: #f3f3ff;
   --background-reversed: #2d2b3d;
 
+  --background-shine: #c0bbff;
+
   --text-color: #38364b;
   --text-hover: #756fc2;
-  --text-error: #c13054;
-  --text-positive: #4c8d4c;
+  --text-positive: #5dac5d;
   --text-noticed: #d47f17;
 
   --border-color: #8580db;
@@ -23,12 +25,14 @@
 
 html.dark {
   --background: #191824;
+  --background-secondary: #444073c8;
   --background-hover: #202036;
-  --background-reversed: #ffffff;
+  --background-reversed: #ffffffb4;
+
+  --background-shine: #7672e17b;
 
   --text-color: #ffffff;
   --text-hover: #d5d4f7;
-  --text-error: #c13054;
   --text-positive: #4c8d4c;
   --text-noticed: #e1aa44;
 
@@ -52,6 +56,26 @@ body {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+}
+
+.shine-card::before {
+  position: absolute;
+  content: "";
+  width: 350px;
+  height: 100%;
+  background-color: var(--background-shine);
+  z-index: -10;
+  top: 0;
+  left: -100%;
+  transform: skewX(-45deg);
+  filter: blur(50px);
+  opacity: 0.2;
+
+  transition: left 0.75s ease-in-out;
+}
+
+.shine-card:hover::before {
+  left: 200%;
 }
 
 @keyframes walk-and-respawn {

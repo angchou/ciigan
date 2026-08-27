@@ -4,26 +4,29 @@ import { useState } from "react";
 import blackmage_gif from "../assets/chars/blackmage.gif";
 import blackmage from "../assets/chars/blackmage.png";
 
-import { X } from "lucide-react";
+import { X, Dot } from "lucide-react";
 
 const educationData = [
   {
-    period: "2021 - 2024",
+    from: "2021",
+    to: "2024",
     title: "High School Academic",
     subtitle: "Binh Hung Hoa High School",
     description: "Awarded 3rd Prize in the City-Level Mathematics Competition.",
     highlight: "3rd Prize Math",
   },
   {
-    period: "2024",
+    from: "2024",
+    to: "",
     title: "National Exam",
-    subtitle: "Score: 26.4 / 30",
+    subtitle: "Score: 27.4 / 30",
     description:
-      "Graduation & University Entrance Exam (Math: 8.4 | Physics: 9.0 | English: 9.0)",
+      "Graduation & University Entrance Exam (Math: 9.4 | Physics: 9.0 | English: 9.0)",
     highlight: "26.4 Score",
   },
   {
-    period: "2024 - 2028",
+    from: "2024",
+    to: "2028",
     title: "University Education",
     subtitle: "UIT - VNU-HCM",
     description: "Bachelor's Degree in Information Systems.",
@@ -40,13 +43,13 @@ export default function Education() {
       id="education"
       className="border-b border-[var(--border-color)] flex justify-center w-full px-4 sm:px-6"
     >
-      <div className="border-x border-[var(--border-color)] pt-14 2xl:pt-28 pb-28 px-10 w-full flex justify-center">
-        <div className="flex flex-col gap-6 md:gap-8 w-full max-w-6xl cursor-default">
-          <h1 className="font-bungee mb-3 text-3xl font-bold text-[var(--text-hover)]">
+      <div className="border-x border-[var(--border-color)] pt-14 2xl:pt-28 pb-28 px-4 w-full flex justify-center">
+        <div className="flex flex-col w-6xl cursor-default gap-6 md:gap-8">
+          <h1 className="font-bungee mb-3 text-2xl sm:text-3xl font-bold text-[var(--text-hover)]">
             Education
           </h1>
 
-          <div className="relative w-full">
+          <div className="relative w-full m-auto">
             <div className="absolute top-1/2 left-0 w-full h-[2px] bg-[var(--border-color)] -translate-y-1/2" />
 
             <div className="absolute top-1/2 left-0 -translate-y-1 w-full z-30 pointer-events-none">
@@ -82,7 +85,7 @@ export default function Education() {
               </div>
             </div>
 
-            <div className="relative z-20 flex justify-between items-center w-full">
+            <div className="relative z-20 flex justify-between items-center w-full px-5">
               {educationData.map((item, index) => (
                 <div
                   key={index}
@@ -98,9 +101,10 @@ export default function Education() {
                   />
 
                   <div className="hidden 2xl:flex absolute top-8 flex-col items-center text-center w-64">
-                    <span className="text-sm font-semibold tracking-wider uppercase px-2.5 py-0.5 rounded-full border border-[var(--border-color)] bg-[var(--background-hover)] mb-1">
-                      {item.period}
+                    <span className="text-sm font-semibold opacity-60">
+                      {item.from} {item.to ? " - " : ""} {item.to}
                     </span>
+
                     <h3 className="font-bold text-[var(--text-color)]">
                       {item.title}
                     </h3>
@@ -113,8 +117,13 @@ export default function Education() {
                   </div>
 
                   <div className="flex 2xl:hidden absolute top-6 flex-col items-center text-center w-28">
-                    <span className="text-sm font-semibold opacity-60">
-                      {item.period}
+                    <span className="sm:hidden text-sm font-semibold opacity-60 flex flex-col items-center">
+                      <span>{item.from}</span>
+                      {item.to ? <Dot className="size-5"></Dot> : ""}
+                      <span>{item.to}</span>{" "}
+                    </span>
+                    <span className="max-sm:hidden text-sm font-semibold opacity-60">
+                      {item.from} {item.to ? " - " : ""} {item.to}
                     </span>
                     <h3 className="max-sm:hidden text-xs font-bold text-[var(--text-color)] leading-tight mt-0.5">
                       {item.title}
@@ -143,7 +152,9 @@ export default function Education() {
 
                 <div className="flex flex-col items-start gap-2 pt-1">
                   <span className="text-sm font-semibold tracking-wider uppercase px-2.5 py-0.5 rounded-full border border-[var(--border-color)] bg-[var(--background-hover)]">
-                    {educationData[selectedItem].period}
+                    {educationData[selectedItem].from}{" "}
+                    {educationData[selectedItem].to ? " - " : ""}
+                    {educationData[selectedItem].to}
                   </span>
 
                   <h3 className="text-base font-bold text-[var(--text-color)] mt-1">

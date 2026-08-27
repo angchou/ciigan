@@ -30,7 +30,6 @@ const tech_stacks = [
       { key: "python", label: "Python", src: python },
       { key: "cplusplus", label: "C++", src: cplusplus },
       { key: "spring", label: "Spring Boot", src: spring },
-      { key: "javascript", label: "JavaScript", src: javascript },
     ],
   },
   {

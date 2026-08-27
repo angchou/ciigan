@@ -47,7 +47,7 @@ export default function Projects() {
                     className="absolute h-15 right-0 bottom-0 translate-y-2 translate-x-4 rotate-25 -scale-x-100 group-hover:scale-x-100 group-hover:-rotate-25 transition duration-450"
                   />
 
-                  <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-color)] group-hover:text-[var(--text-noticed)] transition-colors">
+                  <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-noticed)] lg:text-[var(--text-color)] group-hover:text-[var(--text-noticed)] transition-colors">
                     {project.name}
                   </h1>
 

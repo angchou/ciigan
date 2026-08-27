@@ -71,7 +71,7 @@ export default function Taskbar() {
 
   return (
     <nav className="fixed bottom-3 left-1/2 -translate-x-1/2 z-50">
-      <div className="flex items-center gap-1.5 p-1 sm:p-2 rounded-full bg-[var(--background)]/20 backdrop-blur-xl border border-[var(--border-reversed)]/20 shadow-2xl">
+      <div className="flex items-center gap-1.5 p-1 sm:p-2 rounded-full bg-[var(--background)]/20 backdrop-blur-xl border border-[var(--border-color)]/60 shadow-2xl">
         {navItems.map((item) => {
           const isActive = activeSection === item.id;
 
@@ -80,12 +80,12 @@ export default function Taskbar() {
               <a
                 href={`#${item.id}`}
                 onClick={(e) => handleScroll(e, item.id)}
-                className={`relative flex items-center justify-center p-2.5 rounded-full transition-all text-white/80 hover:text-white hover:bg-[var(--background-reversed)]/15 group-hover:-translate-y-1 border border-transparent group-hover:border-[var(--background-reversed)]
+                className={`relative flex items-center justify-center p-2.5 rounded-full transition-all text-white/80 hover:text-white hover:bg-[var(--background-secondary)]/15 group-hover:-translate-y-1 border border-transparent group-hover:border-[var(--border-color)]
                     `}
               >
                 {item.icon}
 
-                <span className="absolute -top-10 scale-0 group-hover:scale-100 transition-all duration-150 origin-bottom px-2.5 py-1 text-[11px] font-medium text-[var(--background-reversed)] bg-[var(--background)]/90 border border-[var(--background-reversed)]/10 rounded-md shadow-lg whitespace-nowrap pointer-events-none z-50">
+                <span className="absolute -top-10 scale-0 group-hover:scale-100 transition-all duration-150 origin-bottom px-2.5 py-1 text-[11px] font-medium text-[var(--background-reversed)] bg-[var(--background)]/90 border border-[var(--border-color)]/10 rounded-md shadow-lg whitespace-nowrap pointer-events-none z-50">
                   {item.name}
                 </span>
               </a>
