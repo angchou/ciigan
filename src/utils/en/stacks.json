@@ -1,0 +1,9 @@
+{
+  "title": "Stacks",
+  "types": {
+    "technology": "Technology",
+    "management": "Management",
+    "security": "Security"
+  },
+  "tools": "Tools"
+}

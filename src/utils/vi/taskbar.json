@@ -1,0 +1,26 @@
+{
+  "about": {
+    "name": "Giới thiệu"
+  },
+  "experiences": {
+    "name": "Kinh nghiệm"
+  },
+  "projects": {
+    "name": "Dự án"
+  },
+  "education": {
+    "name": "Học vấn"
+  },
+  "stacks": {
+    "name": "Công nghệ"
+  },
+  "certificates": {
+    "name": "Chứng nhận"
+  },
+  "github": {
+    "name": "Github"
+  },
+  "contact": {
+    "name": "Liên hệ"
+  }
+}

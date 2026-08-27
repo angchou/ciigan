@@ -1,0 +1,14 @@
+{
+  "title": "Châu Gia An",
+  "info": {
+    "line0": "Hello! Chào mừng bạn đã đến với trang cá nhân của mình. Mình tạo trang web này là để bạn có cái nhìn trực quan nhất về bản thân mình cũng như những thứ mà mình đã xây dựng được.",
+    "line1": "Mình luôn tò mò muốn hiểu rõ bản chất cách vận hành của mọi thứ, vậy nên mình hay bị cuốn vào mấy bài toán khó, và đặc biệt là mình tận hưởng việc liên tục học hỏi những công nghệ mới để viết ra những dòng code tối ưu hơn.",
+    "line2": "Mình thành thạo C++, Java, JavaScript, HTML/CSS và MySQL, cùng với kinh nghiệm thực chiến xây dựng các ứng dụng full-stack có khả năng mở rộng tốt bằng React và Spring Boot."
+  },
+  "link": {
+    "Github": "Github",
+    "Email": "Email",
+    "Linkedin": "Linkedin",
+    "Resume": "CV cá nhân"
+  }
+}

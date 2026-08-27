@@ -1,0 +1,29 @@
+{
+  "title": "Học vấn",
+  "paths": {
+    "path0": {
+      "from": "2021",
+      "to": "2024",
+      "title": "Trung học phổ thông",
+      "subtitle": "Trường THPT Bình Hưng Hòa",
+      "desc": "Đạt giải 3 môn Toán trong kỳ thi Học sinh giỏi cấp Thành phố",
+      "highlight": "Giải 3"
+    },
+    "path1": {
+      "from": "2024",
+      "to": "",
+      "title": "Kỳ thi trung học phổ thông quốc gia",
+      "subtitle": "Điểm số: 27.4 / 30",
+      "desc": "Điểm đầu vào 3 môn chính (Toán: 9.4 | Vật Lý: 9.0 | Anh văn: 9.0)",
+      "highlight": "27.4 điểm"
+    },
+    "path2": {
+      "from": "2024",
+      "to": "2028",
+      "title": "Đại học",
+      "subtitle": "Trường đại học Công nghệ Thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "desc": "Cử nhân ngành Hệ thống thông tin.",
+      "highlight": "Sinh viên UIT khóa K19"
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bungee } from "next/font/google";
 import "./globals.css";
+import I18nProvider from "../utils/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${bungee.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <I18nProvider>
+        <body className="min-h-full flex flex-col">{children}</body>
+      </I18nProvider>
     </html>
   );
 }

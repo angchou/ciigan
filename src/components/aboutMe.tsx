@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
+import { useTranslation } from "next-i18next/pages";
 
 import vivi from "../assets/chars/vivi.png";
 
@@ -16,7 +18,15 @@ const pages = [
   },
 ];
 
+const info_lines = [
+  "Hellooooo there! Welcome to my personal space! I built this website to give you a visual look into who I am and what I build.",
+  "I care about understanding how things actually work under the hood, solving complex problems, and constantly learning new technologies to write clean, efficient code.",
+  "Proficient in C++, Java, JavaScript, HTML/CSS, and MySQL, with hands-on experience building scalable full-stack applications using React and Spring Boot.",
+];
+
 export default function AboutMe() {
+  const { t } = useTranslation("about_me");
+
   return (
     <div
       id="about"
@@ -26,7 +36,7 @@ export default function AboutMe() {
         <div className="flex flex-col min-[880px]:flex-row gap-6 md:gap-8 max-w-6xl cursor-default">
           <div className="w-full md:w-auto shrink-0">
             <h1 className="font-bungee text-3xl sm:text-4xl lg:text-5xl cursor-pointer tracking-wide">
-              Chau Gia An
+              {t("title")}
             </h1>
             <div className="mt-4 flex flex-wrap gap-2">
               {pages.map((page, index) => (
@@ -37,7 +47,7 @@ export default function AboutMe() {
                   key={index}
                   className="py-1 px-3 border border-[var(--border-color)] rounded-full hover:bg-[var(--background-hover)] hover:text-[var(--text-hover)] transition"
                 >
-                  {page.label}
+                  {t("link." + page.label)}
                 </Link>
               ))}
             </div>
@@ -49,20 +59,9 @@ export default function AboutMe() {
           <div className="w-full md:w-auto md:self-stretch border-b md-[880px]:border-b-0 md:border-l border-[var(--border-color)]"></div>
 
           <div className="w-full text-justify flex flex-col gap-3">
-            <p>
-              Hello there! Welcome to my personal space! I built this website to
-              give you a visual look into who I am and what I build.
-            </p>
-            <p>
-              I care about understanding how things actually work under the
-              hood, solving complex problems, and constantly learning new
-              technologies to write clean, efficient code.
-            </p>
-            <p>
-              Proficient in C++, Java, JavaScript, HTML/CSS, and MySQL, with
-              hands-on experience building scalable full-stack applications
-              using React and Spring Boot.
-            </p>
+            {info_lines.map((line, index) => {
+              return <p key={index}>{t("info.line" + index)}</p>;
+            })}
           </div>
         </div>
       </div>

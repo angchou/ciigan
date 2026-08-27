@@ -4,6 +4,8 @@ import { useState } from "react";
 import blackmage_gif from "../assets/chars/blackmage.gif";
 import blackmage from "../assets/chars/blackmage.png";
 
+import { useTranslation } from "react-i18next";
+
 import { X, Dot } from "lucide-react";
 
 const educationData = [
@@ -38,6 +40,8 @@ export default function Education() {
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
 
+  const { t } = useTranslation("education");
+
   return (
     <div
       id="education"
@@ -46,7 +50,7 @@ export default function Education() {
       <div className="border-x border-[var(--border-color)] pt-14 2xl:pt-28 pb-28 px-4 w-full flex justify-center">
         <div className="flex flex-col w-6xl cursor-default gap-6 md:gap-8">
           <h1 className="font-bungee mb-3 text-2xl sm:text-3xl font-bold text-[var(--text-hover)]">
-            Education
+            {t("title")}
           </h1>
 
           <div className="relative w-full m-auto">
@@ -102,31 +106,33 @@ export default function Education() {
 
                   <div className="hidden 2xl:flex absolute top-8 flex-col items-center text-center w-64">
                     <span className="text-sm font-semibold opacity-60">
-                      {item.from} {item.to ? " - " : ""} {item.to}
+                      {t("paths.path" + index + ".from")} {item.to ? " - " : ""}{" "}
+                      {t("paths.path" + index + ".to")}
                     </span>
 
                     <h3 className="font-bold text-[var(--text-color)]">
-                      {item.title}
+                      {t("paths.path" + index + ".title")}
                     </h3>
                     <p className="text-sm font-semibold text-[var(--text-noticed)] mt-0.5">
-                      {item.subtitle}
+                      {t("paths.path" + index + ".subtitle")}{" "}
                     </p>
                     <p className="text-xs opacity-75 mt-1 leading-relaxed">
-                      {item.description}
+                      {t("paths.path" + index + ".desc")}
                     </p>
                   </div>
 
                   <div className="flex 2xl:hidden absolute top-6 flex-col items-center text-center w-28">
                     <span className="sm:hidden text-sm font-semibold opacity-60 flex flex-col items-center">
-                      <span>{item.from}</span>
+                      <span>{t("paths.path" + index + ".from")}</span>
                       {item.to ? <Dot className="size-5"></Dot> : ""}
-                      <span>{item.to}</span>{" "}
+                      <span>{t("paths.path" + index + ".to")}</span>{" "}
                     </span>
                     <span className="max-sm:hidden text-sm font-semibold opacity-60">
-                      {item.from} {item.to ? " - " : ""} {item.to}
+                      {t("paths.path" + index + ".from")} {item.to ? " - " : ""}{" "}
+                      {t("paths.path" + index + ".to")}{" "}
                     </span>
                     <h3 className="max-sm:hidden text-xs font-bold text-[var(--text-color)] leading-tight mt-0.5">
-                      {item.title}
+                      {t("paths.path" + index + ".title")}
                     </h3>
                   </div>
                 </div>
@@ -152,23 +158,23 @@ export default function Education() {
 
                 <div className="flex flex-col items-start gap-2 pt-1">
                   <span className="text-sm font-semibold tracking-wider uppercase px-2.5 py-0.5 rounded-full border border-[var(--border-color)] bg-[var(--background-hover)]">
-                    {educationData[selectedItem].from}{" "}
+                    {t("paths.path" + selectedItem + ".from")}
                     {educationData[selectedItem].to ? " - " : ""}
-                    {educationData[selectedItem].to}
+                    {t("paths.path" + selectedItem + ".to")}
                   </span>
 
                   <h3 className="text-base font-bold text-[var(--text-color)] mt-1">
-                    {educationData[selectedItem].title}
+                    {t("paths.path" + selectedItem + ".title")}
                   </h3>
 
                   <p className="text-sm font-semibold text-[var(--text-noticed)]">
-                    {educationData[selectedItem].subtitle}
+                    {t("paths.path" + selectedItem + ".subtitle")}
                   </p>
 
                   <div className="w-full h-[1px] bg-[var(--border-color)] my-1" />
 
                   <p className="opacity-80 leading-relaxed">
-                    {educationData[selectedItem].description}
+                    {t("paths.path" + selectedItem + ".desc")}
                   </p>
                 </div>
               </div>

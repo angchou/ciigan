@@ -1,0 +1,26 @@
+{
+  "about": {
+    "name": "About me"
+  },
+  "experiences": {
+    "name": "Experiences"
+  },
+  "projects": {
+    "name": "Projects"
+  },
+  "education": {
+    "name": "Education"
+  },
+  "stacks": {
+    "name": "Stacks"
+  },
+  "certificates": {
+    "name": "Certificates"
+  },
+  "github": {
+    "name": "Github"
+  },
+  "contact": {
+    "name": "Contact me!"
+  }
+}

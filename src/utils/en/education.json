@@ -1,0 +1,29 @@
+{
+  "title": "Education",
+  "paths": {
+    "path0": {
+      "from": "2021",
+      "to": "2024",
+      "title": "High School Academic",
+      "subtitle": "Binh Hung Hoa High School",
+      "desc": "Awarded 3rd Prize in the City-Level Mathematics Competition.",
+      "highlight": "3rd Prize Math"
+    },
+    "path1": {
+      "from": "2024",
+      "to": "",
+      "title": "National Exam",
+      "subtitle": "Score: 27.4 / 30",
+      "desc": "Graduation & University Entrance Exam (Math: 9.4 | Physics: 9.0 | English: 9.0)",
+      "highlight": "27.4 Score"
+    },
+    "path2": {
+      "from": "2024",
+      "to": "2028",
+      "title": "University Education",
+      "subtitle": "UIT - VNU-HCM",
+      "desc": "Bachelor's Degree in Information Systems.",
+      "highlight": "UIT Student"
+    }
+  }
+}

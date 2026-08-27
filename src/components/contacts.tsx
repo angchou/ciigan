@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 import { Copy, SquareArrowOutUpRight, Check } from "lucide-react";
 
@@ -39,6 +40,8 @@ const social_links = [
 ];
 
 export default function Contacts() {
+  const { t } = useTranslation("contacts");
+
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -73,7 +76,7 @@ export default function Contacts() {
       <div className="border-x border-[var(--border-color)] py-6 sm:py-10 px-4 sm:px-8 w-full flex justify-center">
         <div className="flex flex-col gap-6 md:gap-8 w-6xl cursor-default">
           <h1 className="font-bungee text-2xl w-full sm:text-3xl font-bold text-[var(--text-hover)]">
-            Contact me!
+            {t("title")}
           </h1>
 
           <div className="grid grid-cols-1 min-[800px]:grid-cols-2 min-[1270px]:grid-cols-3 gap-4 w-full">
@@ -124,7 +127,7 @@ export default function Contacts() {
                     }}
                   >
                     <Check className="w-4 h-4 shrink-0" />
-                    <span>Copied</span>
+                    <span>{t("copied")}</span>
                   </div>
                 </Link>
               );

@@ -1,0 +1,20 @@
+{
+  "coffee_pos": {
+    "name": "Hệ thống máy POS cho quán cà phê",
+    "type": "Đồ án môn học",
+    "role": "Lập trình Fullstack",
+    "desc": "Xây dựng hệ thống POS mở rộng giúp hiện đại hóa quy trình quản lý cửa hàng thủ công. Giúp giảm 50% thời gian thanh toán tại quầy bán hàng, đảm bảo độ chính xác kho hàng 100% theo thời gian thực và cung cấp Dashboard báo cáo doanh thu trực quan."
+  },
+  "edupath": {
+    "name": "Hệ thống quản lý khóa học Edupath",
+    "type": "Đồ án môn học",
+    "role": "Lập trình Fullstack",
+    "desc": "Phát triển nền tảng quản lý và đăng ký khóa học mở rộng, cho phép giảng viên đăng tải nội dung bài học và học viên dễ dàng đăng ký cũng như theo dõi tiến độ học tập. Xây dựng REST API hiệu năng cao với Spring Boot, giao diện phản hồi tốt bằng React và thiết kế cơ sở dữ liệu tối ưu với Oracle."
+  },
+  "title": "Dự án tham gia",
+  "tag": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "website": "Website"
+  }
+}

@@ -1,3 +1,5 @@
+"use client";
+
 import AboutMe from "../components/aboutMe";
 import MyExperiences from "../components/myExperience";
 import Projects from "../components/projects";
@@ -9,8 +11,10 @@ import Certificate from "../components/certificates";
 import Footer from "../components/foorter";
 import Taskbar from "../components/taskbar";
 import ChangeThemeButton from "../components/changeThemeButton";
+import ChangeLanguageButton from "../components/changeLanguageButton";
+import SettingBar from "../components/settingBar";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="relative">
       <AboutMe />
@@ -23,8 +27,9 @@ export default function Home() {
       <Contacts />
       <Footer />
 
-      <ChangeThemeButton />
       <Taskbar />
+      <SettingBar />
     </div>
   );
-}
+};
+export default Home;

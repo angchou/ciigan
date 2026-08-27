@@ -1,0 +1,34 @@
+{
+  "title": "Giấy chứng nhận",
+  "more": "Xem chi tiết",
+  "show": {
+    "less": "Thu gọn",
+    "more": "Xem thêm"
+  },
+  "items": {
+    "1": {
+      "course_name": "Google IT Automation with Python",
+      "company": "Google",
+      "platform": "Coursera",
+      "summary": "Chứng chỉ chuyên nghiệp gồm 6 khóa học bao quát về lập trình Python, Git/GitHub, tương tác với hệ điều hành và quản trị hệ thống. Thể hiện năng lực viết code tự động hóa công việc, quản lý tài nguyên đám mây và xử lý các kịch bản sự cố Công nghệ thông tin phức tạp."
+    },
+    "2": {
+      "course_name": "Google Data Analytics",
+      "company": "Google",
+      "platform": "Coursera",
+      "summary": "Chứng chỉ chuyên nghiệp gồm 8 khóa học về làm sạch, phân tích và trực quan hóa dữ liệu bằng SQL, lập trình R, Tableau và bảng tính. Thành thạo việc chuyển đổi dữ liệu thô thành thông tin phân tích giá trị, hỗ trợ ra quyết định dựa trên dữ liệu."
+    },
+    "3": {
+      "course_name": "Google Advanced Data Analytics",
+      "company": "Google",
+      "platform": "Coursera",
+      "summary": "Chứng chỉ chuyên nghiệp nâng cao gồm 7 khóa học về phân tích thống kê, mô hình hóa dự báo và Machine Learning sử dụng Python. Thể hiện chuyên môn sâu về quy trình Data Science nâng cao, phân tích khám phá dữ liệu (EDA) và các mô hình hồi quy."
+    },
+    "4": {
+      "course_name": "Google AI Essentials",
+      "company": "Google",
+      "platform": "Coursera",
+      "summary": "Chứng chỉ chuyên môn gồm các module Google AI: Nền tảng AI, Ứng dụng AI trong lập kế hoạch, nghiên cứu, sáng tạo nội dung, phân tích dữ liệu và phát triển ứng dụng. Ứng dụng thành thạo các công cụ Generative AI vào công việc hàng ngày và tối ưu hóa quy trình làm việc."
+    }
+  }
+}

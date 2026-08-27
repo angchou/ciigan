@@ -1,0 +1,14 @@
+{
+  "title": "An Gia Chau",
+  "info": {
+    "line0": "Hello there! Welcome to my personal space! I built this website to give you a visual look into who I am and what I build.",
+    "line1": "I care about understanding how things actually work under the hood, solving complex problems, and constantly learning new technologies to write clean, efficient code.",
+    "line2": "Proficient in C++, Java, JavaScript, HTML/CSS, and MySQL, with hands-on experience building scalable full-stack applications using React and Spring Boot."
+  },
+  "link": {
+    "Github": "Github",
+    "Email": "Email",
+    "Linkedin": "Linkedin",
+    "Resume": "Resume"
+  }
+}

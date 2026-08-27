@@ -1,0 +1,20 @@
+{
+  "coffee_pos": {
+    "name": "Coffee POS",
+    "type": "School project",
+    "role": "Fullstack developer",
+    "desc": "Developed a scalable POS system, modernizing manual store management. Reduced cashier checkout times by 50%, guaranteed 100% real-time inventory precision, and delivered actionable revenue insights via interactive analytics dashboards"
+  },
+  "edupath": {
+    "name": "Edupath",
+    "type": "School project",
+    "role": "Fullstack developer",
+    "desc": "Developed a scalable course registration and management platform empowering instructors to publish content and students to seamlessly enroll and track learning progress. Built high-performance REST APIs with Spring Boot, responsive UI using React, and modeled efficient database schemas with Oracle."
+  },
+  "title": "Projects",
+  "tag": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "website": "Website"
+  }
+}

@@ -1,6 +1,9 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
+
 import cplusplus from "../assets/cplusplus.png";
 import java from "../assets/java.png";
-import javascript from "../assets/javascript.png";
 import mysql from "../assets/mysql.png";
 import node from "../assets/node.png";
 import react from "../assets/react.png";
@@ -33,6 +36,7 @@ const tech_stacks = [
     ],
   },
   {
+    id: "database",
     name: "database",
     type: "management",
     list: [{ key: "mysql", label: "MySQL", src: mysql }],
@@ -48,6 +52,8 @@ const tech_stacks = [
 ];
 
 export default function Stacks() {
+  const { t } = useTranslation("stacks");
+
   return (
     <div
       id="stacks"
@@ -56,7 +62,7 @@ export default function Stacks() {
       <div className="border-x border-[var(--border-color)] py-6 sm:py-10 px-4 sm:px-8 w-full flex justify-center">
         <div className="flex w-full flex-col gap-6 md:gap-8 max-w-6xl cursor-default">
           <h1 className="font-bungee text-2xl sm:text-3xl font-bold text-[var(--text-hover)]">
-            Stacks
+            {t("title")}
           </h1>
 
           <div className="grid grid-cols-1 min-[1270px]:grid-cols-2 gap-4 w-full">
@@ -71,7 +77,7 @@ export default function Stacks() {
                       {stack.name}
                     </h1>
                     <span className="text-[10px] font-semibold opacity-40 uppercase tracking-widest px-2 py-0.5 border border-[var(--border-color)] rounded-md">
-                      {stack.type}
+                      {t("types." + stack.type)}
                     </span>
                   </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import {
   UserRound,
   BriefcaseBusiness,
@@ -15,29 +16,27 @@ import GithubIcon from "./githubIcon";
 const iconSize = "h-4 w-4 sm:h-5 sm:w-5 text-[var(--background-reversed)]";
 
 const navItems = [
-  { name: "About me", id: "about", icon: <UserRound className={iconSize} /> },
+  { id: "about", icon: <UserRound className={iconSize} /> },
   {
-    name: "Experiences",
     id: "experiences",
     icon: <BriefcaseBusiness className={iconSize} />,
   },
   { name: "Projects", id: "projects", icon: <Folder className={iconSize} /> },
   {
-    name: "Education",
     id: "education",
     icon: <BookOpenText className={iconSize} />,
   },
-  { name: "Stacks", id: "stacks", icon: <BicepsFlexed className={iconSize} /> },
+  { id: "stacks", icon: <BicepsFlexed className={iconSize} /> },
   {
-    name: "Certificates",
     id: "certificates",
     icon: <ShieldCheck className={iconSize} />,
   },
-  { name: "Github Stats", id: "github", icon: <GithubIcon h={iconSize} /> },
-  { name: "Contact me!", id: "contact", icon: <Phone className={iconSize} /> },
+  { id: "github", icon: <GithubIcon h={iconSize} /> },
+  { id: "contact", icon: <Phone className={iconSize} /> },
 ];
 
 export default function Taskbar() {
+  const { t } = useTranslation("taskbar");
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
@@ -86,7 +85,7 @@ export default function Taskbar() {
                 {item.icon}
 
                 <span className="absolute -top-10 scale-0 group-hover:scale-100 transition-all duration-150 origin-bottom px-2.5 py-1 text-[11px] font-medium text-[var(--background-reversed)] bg-[var(--background)]/90 border border-[var(--border-color)]/10 rounded-md shadow-lg whitespace-nowrap pointer-events-none z-50">
-                  {item.name}
+                  {t(item.id + ".name")}
                 </span>
               </a>
             </div>

@@ -1,0 +1,34 @@
+{
+  "title": "Certificates",
+  "more": "View certificate",
+  "show": {
+    "less": "Show Less",
+    "more": "Show More"
+  },
+  "items": {
+    "1": {
+      "course_name": "Google IT Automation with Python",
+      "company": "Google",
+      "platform": "Coursera",
+      "summary": "Professional Certificate bundling 6 courses covering Python programming, Git/GitHub, OS interaction, and system administration. Demonstrates expertise in writing code to automate tasks, managing cloud resources, and solving complex IT troubleshooting scenarios."
+    },
+    "2": {
+      "course_name": "Google Data Analytics",
+      "company": "Google",
+      "platform": "Coursera",
+      "summary": "Professional Certificate bundling 8 courses covering data cleaning, analysis, and visualization using SQL, R programming, Tableau, and spreadsheets. Demonstrates proficiency in transforming raw data into actionable business insights and data-driven decision-making."
+    },
+    "3": {
+      "course_name": "Google Advanced Data Analytics",
+      "company": "Google",
+      "platform": "Coursera",
+      "summary": "Professional Certificate bundling 7 advanced courses in statistical analysis, predictive modeling, and machine learning using Python. Demonstrates expertise in advanced data science workflows, EDA, regression models, and exploratory data analysis."
+    },
+    "4": {
+      "course_name": "Google AI Essentials",
+      "company": "Google",
+      "platform": "Coursera",
+      "summary": "Specialization certificate bundling 5 completed Google AI modules: AI Fundamentals, AI for Brainstorming and Planning, AI for Research and Insights, AI for Writing and Communicating, AI for Content Creation, AI for Data Analysis, and AI for App Building. Demonstrates fluency in applying generative AI tools across everyday workflows, content creation, and analysis."
+    }
+  }
+}
